@@ -13,5 +13,5 @@ class Node {
         Node();
 
         void setWeights(int num_weights);
-        double getOutput(std::vector<double> inputs);
+        double getOutput(std::vector<double>& inputs);
 };

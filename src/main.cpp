@@ -31,12 +31,13 @@ vector<double> softmax_binary(vector<double> raw_values) {
 
 int main() {
     Brain brain;
-    vector<double> inputs = {1.0, 2.0}; // Inputs devem ser double
+    vector<double> inputs = {1.0, 2}; // Inputs devem ser double
 
     // Configuração da rede
+    brain.add_layer(3); // Entrada
+    brain.add_layer(5); // Entrada
+    brain.add_layer(3); // Entrada
     brain.add_layer(2); // Entrada
-    brain.add_layer(3); // Oculta
-    brain.add_layer(5); // Saída (ex: [Mover, Comer])
 
     // 1. Pega os valores brutos (Raw Logits) do cérebro
     vector<double> raw_output = brain.get_output(inputs);
